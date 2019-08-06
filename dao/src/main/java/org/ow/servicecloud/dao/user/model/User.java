@@ -11,8 +11,6 @@ import org.ow.servicecloud.dao.base.BaseModel;
 @Data
 public class User extends BaseModel {
 
-    private static final long serialVersionUID = -3067937224759623280L;
-
     /**
      * 用户手机号
      */

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="org.ow.servicecloud.dao.UserMapper">
+<mapper namespace="org.ow.servicecloud.dao.user.mapper.UserMapper">
 
-    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+   <!-- <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="org.ow.servicecloud.dao.user.model.User">
       insert into user (phone,salt,password,age,remark,status,create_time,update_time,createper,updateper)
         values (#{phone},#{salt},#{password},#{age},#{remark},#{status},#{createTime},#{updateTime},#{createper},#{updateper})
+    </insert>-->
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="org.ow.servicecloud.dao.user.model.User">
+        insert into user (phone,salt,password,age)
+        values (#{phone},#{salt},#{password},#{age})
     </insert>
 
     <!--<select id="selectBlog" parameterType="string" resultType="com.zoy.mybatisjpa.entity.Blog">

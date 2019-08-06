@@ -1,5 +1,7 @@
 package org.ow.servicecloud.dao.user.mapper;
 
+import org.ow.servicecloud.dao.user.model.User;
+
 /**
  * @author : owen
  * @email zhaoouyang163@gmail.com
@@ -7,6 +9,6 @@ package org.ow.servicecloud.dao.user.mapper;
  */
 public interface UserMapper {
 
-    void insert(String phone,String password);
+    void insert(User user);
 
 }

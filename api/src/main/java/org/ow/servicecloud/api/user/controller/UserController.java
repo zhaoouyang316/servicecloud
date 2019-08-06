@@ -28,6 +28,7 @@ public class UserController {
         userService.registerUser(userRegisterReq.getPhone(),userRegisterReq.getPassword());
 
         // 构建token返回
+        
 
         return registerVo;
     }

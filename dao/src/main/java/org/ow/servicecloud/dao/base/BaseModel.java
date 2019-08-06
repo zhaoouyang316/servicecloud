@@ -11,7 +11,7 @@ import java.util.Date;
  * @date : 2019/8/6
  */
 @Data
-public class BaseModel implements Serializable{
+public class BaseModel extends BaseId implements Serializable{
 
     private static final long serialVersionUID = -9123499971838023855L;
 
