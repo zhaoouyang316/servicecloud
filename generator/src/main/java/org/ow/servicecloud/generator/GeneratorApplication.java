@@ -8,11 +8,8 @@ import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author : owen
@@ -62,6 +59,7 @@ public class GeneratorApplication {
         globalConfig.setAuthor("owen");
         globalConfig.setOpen(false);
 
+
         mpg.setGlobalConfig(globalConfig);
 
 
@@ -73,10 +71,14 @@ public class GeneratorApplication {
 
         mpg.setDataSource(dataSourceConfig);
 
+
+        String moduleName=scanner("包名");
+        String parent="org.ow.servicecloud";
+
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("user");
-        pc.setParent("org.ow.servicecloud");
+        pc.setModuleName(moduleName);
+        pc.setParent(parent);
         mpg.setPackageInfo(pc);
 
 
@@ -84,7 +86,15 @@ public class GeneratorApplication {
         InjectionConfig cfg = new InjectionConfig() {
             @Override
             public void initMap() {
-                // to do nothing
+                Map<String, Object> map = new HashMap<>();
+                map.put("moduleName",moduleName);
+                map.put("mapper", parent+".dao."+moduleName+".mapper");
+                map.put("entity", parent+".dao."+moduleName+".entity");
+
+                map.put("controller", parent+".api."+moduleName+".controller");
+                map.put("service", parent+".service."+moduleName);
+                map.put("serviceimpl", parent+".service."+moduleName+".impl");
+                this.setMap(map);
             }
         };
 
@@ -117,6 +127,7 @@ public class GeneratorApplication {
         templateConfig.setService("template/service.java");
         templateConfig.setController("template/controller.java");
         templateConfig.setXml("template/mapper.xml");
+        templateConfig.setMapper("template/mapper.java");
         templateConfig.setServiceImpl("template/serviceImpl.java");
         mpg.setTemplate(templateConfig);
 

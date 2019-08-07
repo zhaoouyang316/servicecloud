@@ -1,4 +1,4 @@
-package org.ow.servicecloud.dao.user.model;
+package org.ow.servicecloud.dao.user.entity;
 
 import lombok.Data;
 import org.ow.servicecloud.dao.base.BaseModel;

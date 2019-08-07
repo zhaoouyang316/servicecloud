@@ -1,6 +1,9 @@
-package org.ow.servicecloud.dao.user.model;
+package org.ow.servicecloud.dao.user.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 import org.ow.servicecloud.dao.base.BaseModel;
 
 /**
@@ -9,6 +12,9 @@ import org.ow.servicecloud.dao.base.BaseModel;
  * @date : 2019/8/6
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Accessors(chain=true)
 public class User extends BaseModel {
 
     /**

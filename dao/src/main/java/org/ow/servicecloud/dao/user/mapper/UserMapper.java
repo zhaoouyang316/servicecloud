@@ -1,7 +1,7 @@
 package org.ow.servicecloud.dao.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.ow.servicecloud.dao.user.model.User;
+import org.ow.servicecloud.dao.user.entity.User;
 
 /**
  * @author : owen

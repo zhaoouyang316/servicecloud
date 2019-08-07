@@ -1,6 +1,6 @@
-package ${package.Service};
+package $!{cfg.service};
 
-import ${package.Entity}.${entity};
+import $!{cfg.entity}.${entity};
 import ${superServiceClassPackage};
 
 /**

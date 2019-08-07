@@ -1,18 +1,18 @@
-package ${package.Controller};
+package $!{cfg.controller};
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * <p>
- * ${table.comment}  前端控制器
+ * ${table.comment}
  * </p>
  *
  * @author ${author}
  * @since ${date}
  */
 @Controller
-@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/${table.entityName.toLowerCase()}")
+@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end")
 public class ${table.controllerName} {
 	
 }

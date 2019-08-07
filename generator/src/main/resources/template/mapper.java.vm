@@ -1,6 +1,6 @@
-package ${package.Mapper};
+package $!{cfg.mapper};
 
-import ${package.Entity}.${entity};
+import $!{cfg.entity}.${entity};
 import ${superMapperClassPackage};
 
 /**
