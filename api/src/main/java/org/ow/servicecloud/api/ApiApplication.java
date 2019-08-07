@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"org.ow.servicecloud.dao.user.mapper"})
+@MapperScan(basePackages = {"org.ow.servicecloud.dao.**.mapper"})
 @ComponentScan(basePackages = {
 		"org.ow.servicecloud.api.**",
 		"org.ow.servicecloud.service.**",

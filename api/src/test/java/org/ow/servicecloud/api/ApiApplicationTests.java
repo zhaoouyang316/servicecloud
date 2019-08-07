@@ -2,8 +2,9 @@ package org.ow.servicecloud.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.ow.servicecloud.dao.user.entity.User;
 import org.ow.servicecloud.dao.user.mapper.UserMapper;
-import org.ow.servicecloud.dao.user.model.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;

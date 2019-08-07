@@ -8,8 +8,8 @@
         values (#{phone},#{salt},#{password},#{age},#{remark},#{status},#{createTime},#{updateTime},#{createper},#{updateper})
     </insert>-->
 
-    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="org.ow.servicecloud.dao.user.model.User">
-        insert into user (phone,salt,password,age)
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="org.ow.servicecloud.dao.user.entity.User">
+        insert into t_user (phone,salt,password,age)
         values (#{phone},#{salt},#{password},#{age})
     </insert>
 

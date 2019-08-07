@@ -1,8 +1,8 @@
 package org.ow.servicecloud.service.user;
 
 
+import org.ow.servicecloud.dao.user.entity.User;
 import org.ow.servicecloud.dao.user.mapper.UserMapper;
-import org.ow.servicecloud.dao.user.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
