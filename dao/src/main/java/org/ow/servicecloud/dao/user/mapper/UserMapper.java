@@ -1,5 +1,6 @@
 package org.ow.servicecloud.dao.user.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.ow.servicecloud.dao.user.model.User;
 
 /**
@@ -7,8 +8,6 @@ import org.ow.servicecloud.dao.user.model.User;
  * @email zhaoouyang163@gmail.com
  * @date : 2019/8/6
  */
-public interface UserMapper {
-
-    void insert(User user);
+public interface UserMapper extends BaseMapper<User> {
 
 }
