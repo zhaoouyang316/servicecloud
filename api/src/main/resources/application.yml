@@ -1,5 +1,8 @@
 # 数据源配置
 spring:
+# 环境 dev|test|prod
+  profiles:
+    active: dev
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.1.110:3306/servicecloud?useUnicode=true&characterEncoding=UTF-8
