@@ -1,4 +1,4 @@
-package org.ow.servicecloud.dao.base;
+package org.ow.servicecloud.dao.base.model;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import lombok.Data;
  * @date : 2019/8/6
  */
 @Data
-public class BaseId{
+public class BaseId extends BaseModel{
 
     /**
      * 主键

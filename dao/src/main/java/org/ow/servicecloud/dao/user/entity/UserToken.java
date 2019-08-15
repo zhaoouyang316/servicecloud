@@ -1,7 +1,7 @@
 package org.ow.servicecloud.dao.user.entity;
 
 import lombok.Data;
-import org.ow.servicecloud.dao.base.BaseModel;
+import org.ow.servicecloud.dao.base.model.BaseAutoId;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,7 +12,7 @@ import java.util.Date;
  * @date : 2019/8/6
  */
 @Data
-public class UserToken extends BaseModel implements Serializable {
+public class UserToken extends BaseAutoId implements Serializable {
 
     private static final long serialVersionUID = -304402767783372565L;
 

@@ -1,7 +1,10 @@
 package org.ow.servicecloud.dao.dept.entity;
 
 import lombok.Data;
-import org.ow.servicecloud.dao.base.BaseModel;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
+import org.ow.servicecloud.dao.base.model.BaseAutoId;
+import org.ow.servicecloud.dao.base.model.BaseId;
 
 
 import java.io.Serializable;
@@ -14,8 +17,10 @@ import java.io.Serializable;
  * @author owen
  * @since 2019-08-07
  */
+@NoArgsConstructor
 @Data
-public class TDept extends BaseModel implements Serializable {
+@Accessors(chain = true)
+public class TDept extends BaseAutoId implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

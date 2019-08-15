@@ -1,4 +1,4 @@
-package org.ow.servicecloud.dao.base;
+package org.ow.servicecloud.dao.base.model;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import java.util.Date;
  * @date : 2019/8/6
  */
 @Data
-public class BaseModel extends BaseId implements Serializable{
+public class BaseModel implements Serializable{
 
     private static final long serialVersionUID = -9123499971838023855L;
 
@@ -19,7 +19,5 @@ public class BaseModel extends BaseId implements Serializable{
     public Integer status;
     public Date createTime;
     public Date updateTime;
-    public String createper;
-    public String updateper;
 
 }
