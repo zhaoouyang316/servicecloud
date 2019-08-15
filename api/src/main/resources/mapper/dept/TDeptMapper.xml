@@ -12,6 +12,9 @@
         dname, db_source
     </sql>
 
+
+	<!-- 自定义查询语句 -->
+
 	<select id="findById" resultType="TDept" parameterType="Long">
 		select id,dname,db_source from t_dept where id=#{id};
 	</select>

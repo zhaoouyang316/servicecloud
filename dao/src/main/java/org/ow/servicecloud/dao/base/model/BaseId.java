@@ -1,6 +1,7 @@
 package org.ow.servicecloud.dao.base.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * @author : owen
@@ -8,6 +9,7 @@ import lombok.Data;
  * @date : 2019/8/6
  */
 @Data
+@ToString(callSuper = true)
 public class BaseId extends BaseModel{
 
     /**

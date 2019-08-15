@@ -20,7 +20,7 @@ public class DeptController {
 
     @RequestMapping(value="/dept/add",method = RequestMethod.POST)
     public boolean add(TDept tDept){
-        return service.addDept(tDept);
+        return service.save(tDept);
     }
 
     @RequestMapping(value = "/dept/update",method = RequestMethod.POST)
@@ -30,7 +30,7 @@ public class DeptController {
 
     @RequestMapping(value = "/dept/get/{id}",method = RequestMethod.GET)
     public TDept get(@PathVariable("id") Long id){
-        return service.findById(id);
+        return service.getById(id);
     }
 
     @RequestMapping(value = "/dept/list",method = RequestMethod.GET)

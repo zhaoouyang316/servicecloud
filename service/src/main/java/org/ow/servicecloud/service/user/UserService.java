@@ -27,8 +27,6 @@ public class UserService {
         user.setAge(18);
         user.setRemark("");
         user.setStatus(1);
-        user.setCreateper("");
-        user.setUpdateper("");
         user.setCreateTime(new Date());
         user.setUpdateTime(new Date());
 
