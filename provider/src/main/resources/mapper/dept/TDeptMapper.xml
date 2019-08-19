@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ow.servicecloud.dao.dept.mapper.TDeptMapper">
+
+	<resultMap id="BaseResultMap" type="org.ow.servicecloud.dao.dept.entity.TDept">
+		<result column="dname" property="dname" />
+		<result column="db_source" property="dbSource" />
+	</resultMap>
+
+    <!-- 通用查询结果列-->
+    <sql id="Base_Column_List">
+        dname, db_source
+    </sql>
+
+
+	<!-- 自定义查询语句 -->
+
+	<select id="findById" resultType="TDept" parameterType="Long">
+		select id,dname,db_source from t_dept where id=#{id};
+	</select>
+
+	<select id="findAll" resultType="TDept">
+		select id,dname,db_source from t_dept;
+	</select>
+
+	<insert id="addDept" parameterType="TDept">
+		INSERT INTO t_dept(dname,db_source) VALUES(#{dname},#{dbSource});
+	</insert>
+
+</mapper>

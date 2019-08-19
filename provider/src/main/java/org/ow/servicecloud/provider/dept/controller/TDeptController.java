@@ -1,10 +1,13 @@
-package org.ow.servicecloud.api.dept.controller;
+package org.ow.servicecloud.provider.dept.controller;
 
+import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.databind.util.JSONPObject;
 import org.ow.servicecloud.dao.dept.entity.TDept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -15,8 +18,7 @@ import org.springframework.web.client.RestTemplate;
  * @author owen
  * @since 2019-08-07
  */
-@Controller
-@RequestMapping("/dept")
+@RestController
 public class TDeptController {
 
     private static final String REST_URL_PREFIX="http://localhost:8081";
@@ -26,7 +28,7 @@ public class TDeptController {
 
     @RequestMapping(value="/consumer/dept/add")
     public boolean add(TDept tDept){
-        return restTemplate.postForObject(REST_URL_PREFIX+"/add/add",tDept,Boolean.class);
+        return restTemplate.postForObject(REST_URL_PREFIX+"/dept/add",tDept,Boolean.class);
     }
 
     @RequestMapping(value="/consumer/dept/get/{id}")

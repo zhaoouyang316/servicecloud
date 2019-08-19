@@ -1,4 +1,4 @@
-package org.ow.servicecloud.api.config;
+package org.ow.servicecloud.provider.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
